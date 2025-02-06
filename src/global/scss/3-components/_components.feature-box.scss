@@ -1,0 +1,40 @@
+///* ========================================================================
+//   #Feature Box
+//   ======================================================================== */
+.app {
+  /* FEATURE BOX */
+
+  .c-feature-box {
+    background: url('../img/bg1.svg') var(--brand-blue);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    padding: var(--padding);
+    border-radius: var(--border-radius-s);
+
+    align-self: stretch;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+
+
+  }
+
+  .c-feature-box {
+    p,
+    h3,
+    label,
+    a {
+      color: var(--white);
+    }
+
+    h3 {
+      margin: 0 0 1rem 0;
+    }
+
+    p {
+      width: 8rem;
+      line-height: 1.2;
+    }
+  }
+}

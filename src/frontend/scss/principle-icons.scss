@@ -1,0 +1,41 @@
+.principle-icons {
+  display: flex;
+  flex-flow: row wrap;
+  list-style-type: none;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+
+  p,
+  li {
+    text-align: center;
+  }
+}
+
+.principle-icon {
+  height: 5rem;
+  width: 5rem;
+  min-width: 5rem;
+  border-radius: 50%;
+  border: none;
+  display: inline-block;
+  transition: all 0.25s ease;
+  filter: saturate(100%) brightness(100%);
+  padding: 0;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  &:hover {
+    cursor: pointer;
+    filter: saturate(150%) brightness(110%);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    /* Any other styles to indicate disabled status */
+  }
+}

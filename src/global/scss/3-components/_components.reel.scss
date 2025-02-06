@@ -1,0 +1,59 @@
+///* ========================================================================
+//   #Reel
+//   ======================================================================== */
+.app {
+
+  /* Reel */
+
+    .c-reel-wrapper, .c-reel-wrapper-outer {
+      width: 100%;
+    }
+  
+    .c-reel {
+      display: flex;
+      block-size: auto;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding: 0;
+      scrollbar-color: #fff var(--brand-blue);
+
+      .panel {
+          height: 100%;
+      }
+    }
+  
+    .c-reel::-webkit-scrollbar {
+      block-size: 1rem;
+    }
+  
+    .c-reel::-webkit-scrollbar-track {
+      background-color: var(--brand-blue);
+    }
+  
+    .c-reel::-webkit-scrollbar-thumb {
+      background-color: var(--brand-blue);
+      background-image: linear-gradient(var(--brand-blue) 0, var(--brand-blue) 0.25rem, #fff 0.25rem, #fff 0.75rem, var(--brand-blue) 0.75rem);
+    }
+  
+    .c-reel>* {
+      flex: 0 0 auto;
+    }
+  
+  
+    .c-reel>img {
+      block-size: 100%;
+      flex-basis: auto;
+      width: auto;
+    }
+  
+    .c-reel>*+* {
+      margin-inline-start: 1rem;
+    }
+  
+    .c-reel.overflowing {
+      padding-block-end: 1rem;
+    }
+  
+    /* End Reel */
+
+}

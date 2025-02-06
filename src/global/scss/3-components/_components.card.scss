@@ -1,0 +1,34 @@
+///* ========================================================================
+//   #Cards
+//   ======================================================================== */
+.app {
+  /* Card */
+    .c-card {
+      position: relative;
+      max-width: 300px;
+      border-radius: var(--border-radius-s);
+      margin-bottom: var(--padding);
+    }
+
+    img {
+      width: 100%;
+      border-radius: var(--border-radius-s);
+    }
+
+    p {
+      margin: 0 0 .5rem 0;
+    }
+  
+    // .c-card button {
+    //   position: absolute;
+    //   width: 100%;
+    //   height: 100%;
+    //   border: none;
+    //   cursor: pointer;
+    //   -webkit-appearance: none;
+    //   -moz-appearance: none;
+    //   background: none;
+    // }
+  
+    /* End Card */
+}

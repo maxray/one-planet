@@ -1,0 +1,10 @@
+/node_modules
+.DS_Store
+.env
+.log
+.vscode
+!/.vscode/launch.json
+config.codekit
+config.codekit3
+assets/css/*
+assets/js/*

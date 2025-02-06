@@ -1,0 +1,49 @@
+///* ========================================================================
+//   #HEADINGS
+//   ======================================================================== */
+
+.app {
+  h1 {
+    font-size: 1.563rem;
+    color: var(--grey);
+    font-weight: 300;
+  }
+
+  @media screen and (min-width: 768px) {
+    h1 {
+      font-size: calc(clamp(1.563rem, -0.875rem + 5.333vw, 3.438rem));
+      line-height: 1;
+    }
+  }
+
+  /* h1 span , h2 span , h3 span {
+    color:var(--brand-dark-green);
+} */
+
+  h2 {
+    font-size: 2.188rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: var(--grey);
+  }
+
+  @media screen and (max-width: 600px) {
+    h2 {
+      font-size: 1.188rem;
+      line-height: 1.938rem;
+    }
+  }
+
+  h3 {
+    font-size: 2.188rem;
+    line-height: 3rem;
+    color: var(--grey);
+  }
+
+  @media screen and (max-width: 600px) {
+    h3 {
+      font-size: 1.563rem;
+      line-height: 2.063rem;
+    }
+  }
+}

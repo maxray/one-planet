@@ -1,0 +1,77 @@
+@import '1-settings/settings.global'; // Project-wide variables and settings.
+@import '2-elements/elements.headings';
+@import '2-elements/elements.forms';
+@import '3-components/components.buttons';
+@import '3-components/components.feature-box';
+@import '3-components/components.reel';
+@import '3-components/components.card';
+// @import '3-components/components.print-styles';
+
+body {
+  background-color: red;
+}
+
+.utilities {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  gap: 0.25rem;
+}
+
+.print-plan p {
+  font-size: 0.875rem !important;
+  line-height: 1.4;
+  font-weight: 300;
+  @media screen and (min-width: 768px) {
+    font-size: 0.813rem !important;
+  }
+}
+
+@media print {
+  html,
+  body {
+    width: 297mm;
+    height: 210mm;
+  }
+
+  body {
+    padding: 0 !important;
+  }
+
+  #oplbase-frontend-app {
+    margin-block-start: 0 !important;
+  }
+
+  #oplbase-frontend-app footer,
+  #oplbase-frontend-app .app-header,
+  #oplbase-frontend-app .print-plan .print-options,
+  .wp-block-template-part,
+  footer {
+    display: none;
+  }
+
+  .principle-icon {
+    height: 3.8rem !important;
+    width: 4.2rem !important;
+    min-width: 3.8rem !important;
+  }
+
+  .principle-icon img {
+    height: 3.6rem !important;
+    width: 3.6rem !important;
+    min-width: 3.6rem;
+  }
+
+  body .is-layout-flow > *,
+  .wp-site-blocks > * {
+    margin-block-start: 0 !important;
+  }
+
+  body .wp-site-blocks {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}
+.print-plan .action__description p {
+  margin-top: 0;
+}

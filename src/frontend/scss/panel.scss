@@ -1,0 +1,132 @@
+.panel-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  .c-card {
+    max-width: 100%;
+  }
+
+  &.selected {
+    .panel {
+      background-color: var(--brand-blue);
+
+      h3,
+      p {
+        color: var(--white);
+      }
+    }
+  }
+}
+.panel-list__item {
+  list-style: none;
+}
+
+.panel-list__item.selected {
+  background-color: #e0f7fa;
+  /* Light blue highlight */
+  border: 2px solid #00796b;
+
+.c-btn--utility svg {
+    fill: black;
+  }
+}
+
+
+
+button.panel {
+  cursor: pointer;
+  &:hover,
+  &.selected {
+    background-color: var(--brand-green);
+    border: 1px solid var(--brand-green);
+
+    &.tool {
+      background-color: var(--brand-blue);
+      border: 1px solid var(--brand-blue);
+    }
+
+    h3,
+    div,
+    p {
+      color: var(--white);
+    }
+  }
+}
+
+.panel {
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  margin-bottom: 1rem;
+  background-color: transparent;
+  text-align: left;
+  padding: 0;
+  border-radius: var(--border-radius-s);
+  border: 1px solid var(--brand-blue);
+  padding: var(--padding);
+  line-height: 1.5;
+  transition: background-color 0.25s ease;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+
+
+  img {
+    border-radius: 5px 5px 0 0;
+    height: 150px;
+    object-fit: cover;
+  }
+
+  h3,
+  p,
+  span {
+    transition: color 0.25s ease;
+  }
+
+  h3,
+  h4 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--brand-blue);
+  }
+
+  p {
+    margin: 0.25rem auto 1rem;
+    font-weight: 100;
+  }
+
+  &.selected {
+    background-color: var(--brand-green);
+    border: 1px solid var(--brand-green);
+    h3,
+    p,
+    div {
+      color: var(--white);
+    }
+  }
+}
+
+.panel.wide-style {
+    @media screen and (min-width: 768px) {
+      flex-direction:row;
+      gap: 1rem;
+
+      img {
+        max-width: 400px;
+      }
+    }
+}
+
+.panel__header {
+  display: flex;
+  gap: var(--padding-s);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.panel__button {
+  width: 100%;
+  border: 0;
+  font-family: 'Montserrat', sans-serif;
+}
