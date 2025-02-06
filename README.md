@@ -64,4 +64,6 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 This plugin is currently using `smtp.gmail.com` for SMTP
 
-### Use WP Udated to allow updates via the WP dashboard
+### Use WP Updater to allow updates via the WP dashboard
+
+I had to change ther git ingnore.. 
