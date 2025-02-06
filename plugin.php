@@ -3,14 +3,18 @@
  * Plugin Name: One Planet Living
  * Plugin URI: https://ecobirmingham.com/
  * Description: An interactive tool to help you create your own One Planet Living Action Plan.
- * Version: 1.0
+ * Version: 1.0.1
  * Author: Sush Kelly
  * Author URI: https://sushkelly.co.uk
  * License: GPL2
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: textdomain
  * Domain Path: /languages
+ * GitHub Plugin URI: https://github.com/maxray/one-planet
+ * Primary Branch: main
  *
+
+
  * @package OPL
  */
 
