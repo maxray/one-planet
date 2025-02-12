@@ -204,7 +204,7 @@ const handleCancel = () => {
                     </div>
                     <div v-if="data.principleVideo">
                       <!-- Render video if set -->
-                      <div v-html="data.principleVideo"></div>
+                      <div v-html="data.principleVideo" class="principle-video"></div>
                     </div>
                     <div v-else-if="data.principleImage.url">
                       <!-- Render image if video is not set -->
@@ -250,6 +250,11 @@ const handleCancel = () => {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+@media screen and (max-width: 600px) {
+  flex-direction: column;
+}
+
 }
 
 .principles {
@@ -269,8 +274,17 @@ const handleCancel = () => {
 
 .principle__header {
   display: flex;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
   margin-bottom: var(--padding);
   gap: var(--padding);
+
+  .principle-image , iframe{
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 1rem;
+    } 
 
   .principle-icon,
   .principle-media {
@@ -322,4 +336,19 @@ const handleCancel = () => {
   h4 {
     font-size: 1.25rem;
   }
-}</style>
+}
+
+.app .c-feature-box {
+@media only screen and (max-width: 768px) {
+    display: flex;
+    block-size: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0;
+    list-style: none;
+    scrollbar-color: #fff var(--brand-blue);
+}
+}
+
+
+</style>

@@ -91,6 +91,14 @@ p {
   }
 }
 
+.principle-video iframe {
+  max-width: 100%;
+  @media screen and (min-width: 768px) {
+  max-width: 300px;
+  height: auto;
+  }
+
+}
 /* Helpers */
 
 .h-flow {
@@ -120,7 +128,7 @@ p {
   background-color: var(--white);
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 768px) {
   .h-2-col {
     display: grid !important;
     grid-gap: var(--padding-l);

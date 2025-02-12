@@ -81,9 +81,9 @@ const choosePrinciple = (principle) => {
     <div v-html="principle.description"></div>
     <div v-if="principle.video">
       <!-- Render video if set -->
-      <div v-html="principle.video"></div>
+      <div v-html="principle.video" class="principle-video"></div>
     </div>
-    <div v-else-if="principle.image.url">
+    <div v-else-if="principle.image.url" class="principle-image">
       <!-- Render image if video is not set -->
       <img :src="principle.image.url" alt="Image Alt Text" class="principle-image" />
     </div>

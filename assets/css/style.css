@@ -74,6 +74,16 @@ p {
   }
 }
 
+.principle-video iframe {
+  max-width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .principle-video iframe {
+    max-width: 300px;
+    height: auto;
+  }
+}
+
 /* Helpers */
 .h-flow {
   --space: 1.5rem;
@@ -102,7 +112,7 @@ p {
   background-color: var(--white);
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 768px) {
   .h-2-col {
     display: grid !important;
     grid-gap: var(--padding-l);
@@ -364,6 +374,7 @@ p {
   overflow-x: auto;
   overflow-y: hidden;
   padding: 0;
+  list-style: none;
   scrollbar-color: #fff var(--brand-blue);
 }
 .app .c-reel .panel {
