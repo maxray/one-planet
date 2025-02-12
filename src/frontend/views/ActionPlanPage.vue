@@ -173,7 +173,7 @@ const handleCancel = () => {
                 class="principle filled"
                 :style="{
                   backgroundColor: data.principleColor,
-                  color: '#ffffff',
+                  color: '#002f49',
                 }"
               >
                 <div class="principle__header">
@@ -307,7 +307,7 @@ const handleCancel = () => {
   flex-direction: column;
 
   >* , h2  {
-    color: #ffffff;
+    color: #002f49;
   }
 
   .panel {
