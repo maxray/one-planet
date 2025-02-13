@@ -4,8 +4,8 @@ import { useUserStore } from '@/frontend/stores/userStore.js'
 
 const store = useUserStore()
 
-const isLoggedIn = computed(() => !!store.userData.username)
-const userData = computed(() => store.userData)
+const isLoggedIn = computed(() => !!store.userData?.username)
+const userData = computed(() => store.userData || {})
 
 const logout = () => {
   store.logout()
@@ -21,7 +21,7 @@ const logout = () => {
       </nav>
 
       <div class="user-controls">
-        <strong>{{ userData.username }}</strong> |
+        <strong>{{ userData?.username || 'Guest' }}</strong> |
         <button class="btn-link" @click="logout">Logout</button>
         <!-- {{ currentOption }} -->
       </div>

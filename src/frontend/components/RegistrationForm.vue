@@ -62,6 +62,7 @@ const handleSubmit = async (credentials) => {
     :submit-class="['c-btn', 'c-btn--primary']"
     @submit="handleSubmit"
   >
+
     <div class="control">
       <FormKit
         id="username"
@@ -70,7 +71,6 @@ const handleSubmit = async (credentials) => {
         label="Username"
         validation="required"
         placeholder="Enter your username"
-        autocomplete="new-username"
       />
     </div>
     <div class="control">
@@ -81,7 +81,6 @@ const handleSubmit = async (credentials) => {
         label="Password"
         validation="required"
         placeholder="Enter your password"
-        autocomplete="new-password"
       />
     </div>
     <div class="control">

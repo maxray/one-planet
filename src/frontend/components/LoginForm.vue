@@ -1,34 +1,18 @@
 <script setup>
 import { ref } from 'vue'
-import axios from 'axios'
 import { useUserStore } from '@/frontend/stores/userStore.js'
-import { useSelectionStore } from '@/frontend/stores/selectionStore.js'
 
 const userStore = useUserStore()
-const selectionStore = useSelectionStore()
 const errorMessage = ref('')
 
 const login = async (value) => {
   console.log('LOGIN CALLED')
   try {
-    // const response = await axios.post('/wp-json/vueapp/v1/login', value)
-
-    // if (response.data.success) {
-    //   await userStore.login(value)
-
-    //   const userId = response.data.user.id
-    //   const metaKey = userStore.metaKey
-    //   await selectionStore.fetchUserData(userId, metaKey)
-
-    //   console.log('RESPONSE: --', response.data)
-    //   console.log('RESPONSE USER ID: --', response.data.user.id)
-    //   // router.push({ path: '/login', query: { registered: 'true' } })
-    //   // Handle success (e.g., redirect or show a success message)
-    // } else {
-    //   errorMessage.value =
-    //     response.data.message || 'Login failed. Please try again.'
-    // }
-    await userStore.login(value)
+    const credentials = {
+      username: value.login_username,
+      password: value.login_password,
+    }
+    await userStore.login(credentials)
   } catch (error) {
     console.error('Login Error:', error)
     // Handle any additional login errors here
@@ -59,17 +43,18 @@ const login = async (value) => {
     @submit="login"
   >
     <FormKit
-      id="username"
-      name="username"
+      id="login-username"
+      name="login_username"
       label="Username"
       type="text"
       placeholder="Username"
       autocomplete="current-username"
       validation="required"
+      
     />
     <FormKit
-      id="password"
-      name="password"
+      id="login-password"
+      name="login_password"
       label="Password"
       type="password"
       placeholder="Password"
