@@ -97,12 +97,7 @@ function fetchDataFromStore(storedData) {
         principleId: principleId,
         actions: actionData,
       })
-    } else {
-      result.push({
-        principleName: null,
-        actions: null,
-      })
-    }
+    } 
   }
 
   return result
@@ -282,6 +277,10 @@ h3 {
   grid-auto-rows: 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   gap: var(--padding);
+}
+
+.principle-column{
+  border-radius: var(--border-radius-xs);
 }
 
 .principle {
