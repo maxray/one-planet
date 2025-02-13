@@ -136,7 +136,10 @@ function fetchDataFromStore(storedData) {
               <div class="principle__intro">
                 <div class="principle__header">
                   <div :class="'principle-icon pi-' + data.principleId">
-                    <img :src="data.principleIcon.url" alt="{{ data.principleName }}" />
+                    <div :class="'principle-icon pi-' + data.principleId">
+                      <img v-if="data.principleIcon" :src="data.principleIcon.url" :alt="data.principleName" />
+                    </div>
+
                   </div>
                   <h2>{{ data.principleName }}</h2>
                 </div>
