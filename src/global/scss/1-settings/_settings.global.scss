@@ -29,32 +29,31 @@
   --health-annd-happiness-light: #ffe0dd;
 
   --equite-and-local-economy: #ffc476;
-    --equite-and-local-economy-light: #ffecd5;
+  --equite-and-local-economy-light: #ffecd5;
 
   --culture-and-community: #ffe471;
-    --culture-and-community-light: #fff2c5;
+  --culture-and-community-light: #fff2c5;
 
   --travel-and-transport: #feff73;
-    --travel-and-transport-light: #fdffc2;
+  --travel-and-transport-light: #fdffc2;
 
   --land-and-nature: #bfec45;
-    --land-and-nature-light: #efffc3;
+  --land-and-nature-light: #efffc3;
 
   --local-and-sustainable-food: #82ffa3;
-    --local-and-sustainable-food-light: #e3ffe6;
+  --local-and-sustainable-food-light: #e3ffe6;
 
   --sustainable-water: #53fefe;
-    --sustainable-water-light: #dbf7f8;
+  --sustainable-water-light: #dbf7f8;
 
   --materials-and-products: #17b9ff;
-    --materials-and-products-light: #ddf0f9;
+  --materials-and-products-light: #ddf0f9;
 
   --zero-waste: #abbbff;
-    --zero-waste-light: #dce4ff;
+  --zero-waste-light: #dce4ff;
 
   --zero-carbon-energy: #ebb2fe;
-    --zero-carbon-energy-light: #f8edff;
-
+  --zero-carbon-energy-light: #f8edff;
 
   // Padding
   --padding-xs: 0.5rem;
@@ -73,11 +72,6 @@
   width: 100%;
   color: var(--base-content);
   font-family: 'Montserrat', sans-serif;
-  // font-size: var(--base-font-size);
-
-  @media only screen and (max-width: 768px) {
-    // font-size: 14px;
-  }
 }
 
 p {
@@ -94,10 +88,9 @@ p {
 .principle-video iframe {
   max-width: 100%;
   @media screen and (min-width: 768px) {
-  max-width: 300px;
-  height: auto;
+    max-width: 300px;
+    height: auto;
   }
-
 }
 /* Helpers */
 

@@ -6,11 +6,6 @@
   .btn {
     cursor: pointer;
     padding: var(--padding-s) var(--padding);
-
-    @media only screen and (max-width: 768px) {
-      padding: var(--padding-xs) var(--padding-s);
-    }
-
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     display: inline-block;
@@ -23,6 +18,10 @@
 
     &:last-of-type {
       margin-right: 0;
+    }
+
+    @media only screen and (max-width: 768px) {
+      padding: var(--padding-xs) var(--padding-s);
     }
   }
 
@@ -60,7 +59,7 @@
     text-align: center;
     transition: all 0.2s ease-in;
     border: solid 1px var(--white);
-    margin-right: .5rem;
+    margin-right: 0.5rem;
   }
 
   .c-btn--primary,

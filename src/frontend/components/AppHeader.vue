@@ -33,12 +33,13 @@ const logout = () => {
 header {
   width: 100%;
   display: flex;
-  @media screen and (max-width: 600px) {
-    flex-direction: column;
-  }
   justify-content: space-between;
   align-items: center;
   gap: var(--padding-l);
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+  }
 }
 
 nav {
