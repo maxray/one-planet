@@ -120,6 +120,9 @@ class Assets {
             'oplbase-admin' => [
                 'src' =>  OPLBASE_ASSETS . '/css/admin.css'
             ],
+            'oplbase-vendor' => [
+                'src' =>  OPLBASE_ASSETS . '/css/vendors.css'
+            ],
         ];
 
         return $styles;

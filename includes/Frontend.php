@@ -22,6 +22,7 @@ class Frontend {
 	public function render_frontend( $atts, $content = '' ) {
 		wp_enqueue_style( 'oplbase-frontend' );
 		wp_enqueue_style( 'oplbase-style' );
+		wp_enqueue_style( 'oplbase-vendor' );
 		wp_enqueue_script( 'oplbase-frontend' );
 
 			// Generate a nonce for REST API requests
