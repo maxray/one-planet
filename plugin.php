@@ -1,18 +1,19 @@
 <?php
 /**
- * Plugin Name: One Planet Living
- * Plugin URI: https://github.com/maxray/one-planet
+ * Plugin Name:       One Planet Living
+ * Plugin URI:        https://github.com/maxray/one-planet
+ * Description:       An interactive tool to help you create your own One Planet Living Action Plan.
+ * Version:           1.6.9
+ * Author:            Sush Kelly
+ * License:           GPL2
+ * Domain Path:       /languages
+ * Text Domain:       one-planet-libing
+ * Network:           true
+ * GitHub Plugin URI: https://github.com/maxray/one-planet
  * Primary Branch: main
- * Description: An interactive tool to help you create your own One Planet Living Action Plan.
- * Version: 1.6.8
- * Author: Sush Kelly
- * Author URI: https://sushkelly.co.uk
- * License: GPL2
- * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: textdomain
- * Domain Path: /languages
- * Primary Branch: main
- *
+ * Requires at least: 5.9
+ * Requires PHP:      8.0
+
 
 
  * @package OPL
