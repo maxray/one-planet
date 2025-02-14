@@ -108,7 +108,6 @@ function fetchDataFromStore(storedData) {
   <DefaultLayout>
     <div class="print-plan">
       <section class="print-options">
-        <router-link class="btn btn--outline no-printer" to="/printrequest">I don't have a printer</router-link>
         <button class="btn btn--solid" @click="printPage">Print</button>
       </section>
 
