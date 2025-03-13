@@ -880,6 +880,7 @@ h3[data-v-4fd37ef2] {
   display: flex;
   justify-content: flex-end;
   margin-bottom: var(--padding);
+  gap: var(--padding);
 }
 .panel[data-v-4fd37ef2] {
   padding: var(--padding-xs);

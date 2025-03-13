@@ -109,7 +109,9 @@ function fetchDataFromStore(storedData) {
     <div class="print-plan">
       <h2 class="hide-print">You can print out this plan or - if you would prefer a PDF click print and choose 'Save as PDF' instead of choosing your printer!</h2>
       <section class="print-options">
+        <router-link class="btn btn--outline" to="/actionplan">View or Edit Action plan</router-link>
         <button class="btn btn--solid" @click="printPage">Print</button>
+
       </section>
 
       <div class="action-plan">
@@ -199,6 +201,7 @@ h3 {
   display: flex;
   justify-content: flex-end;
   margin-bottom: var(--padding);
+  gap: var(--padding);
 }
 
 .panel {
