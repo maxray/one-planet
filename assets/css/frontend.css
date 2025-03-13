@@ -590,6 +590,9 @@ button.panel.selected p[data-v-6c044f3a] {
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[8].use[0]!./src/frontend/views/HomePage.vue?vue&type=style&index=0&id=0514d483&scoped=true&lang=css ***!
   \*****************************************************************************************************************************************************************************************************************************************************************/
 
+.embed-container[data-v-0514d483] {
+  margin-bottom: 1rem;
+}
 .logo-opl[data-v-0514d483] {
     max-width: 350px;
     margin-bottom: 1rem;
@@ -598,7 +601,7 @@ button.panel.selected p[data-v-6c044f3a] {
 &[data-v-0514d483] {
   display: flex;
   gap: 1rem;
-    }
+  }
 .col1[data-v-0514d483] {
     width: 50%;
 }

@@ -57,7 +57,9 @@ const isAuthenticated = computed(() => store.isAuthenticated)
 
 <style scoped>
 
-
+.embed-container {
+  margin-bottom: 1rem;
+}
 
 .logo-opl {
     max-width: 350px;
