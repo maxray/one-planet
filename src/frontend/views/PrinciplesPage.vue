@@ -25,20 +25,8 @@ export default {
 <template>
   <DefaultLayout>
     <div>
-      <div>
-        <h2 v-if="username && currentOption === 1">
-          Let us Begin... OK {{ username }}, pick your first principle.
-        </h2>
-        <h2 v-else-if="username && currentOption > 1">
-          OK {{ username }}, pick another principle.
-        </h2>
-        <p>
-          Choose a One Planet Living Principle that you want to add to your toolkit. The next page will provide you with information and options for actions to implement in your lifestyle.
-        </p>
-      </div>
-
       <div class="container">
-        <PrincipleSelect />
+        <PrincipleSelect :username="username" :currentOption="currentOption" />
       </div>
     </div>
   </DefaultLayout>

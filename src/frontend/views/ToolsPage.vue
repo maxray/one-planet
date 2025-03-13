@@ -140,6 +140,11 @@ const saveSelection = async (tools) => {
     query: { option: currentOption },
   })
 }
+
+const goBack = () => {
+  window.history.back()
+}
+
 </script>
 
 <script>
@@ -187,6 +192,7 @@ export default {
                 }}</span>
               </transition-group>
             </div>
+            <button v-if="selectedToolIds.size === 0" @click="goBack" class="c-btn c-btn--primary">I have made a mistake - Go Back</button>
             <button v-if="selectedToolIds.size > 0" 
                     class="c-btn c-btn--primary" 
                     @click="saveSelection">
@@ -194,7 +200,6 @@ export default {
             </button>
 
             <h3>Select tools below and then click continue when you are happy.</h3>
-
             <hr />
 
             <!-- Display tools relevant to the current action -->

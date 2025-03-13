@@ -50,6 +50,14 @@ const choosePrinciple = (principle) => {
     query: { option: currentOption },
   })
 }
+
+import { defineProps } from 'vue'
+
+const props = defineProps({
+  username: String,
+  currentOption: Number,
+});
+
 </script>
 
 <template>
@@ -63,37 +71,48 @@ const choosePrinciple = (principle) => {
             :disabled="isPrincipleSelected[principle.id]"
             @click="showPanel(principle.id)"
           >
-            <img :src="principle.icon.url" alt="{{ principle.title }}" />
+            <img :src="principle.icon.url" :alt="principle.title" />
           </button>
           <p>{{ principle.title }}</p>
         </li>
       </ul>
     </div>
   </div>
+
+  <!-- Default Content Pane -->
+  <div v-if="activePanel === -1" class="principle default-pane">
+     <h2 v-if="props.username && props.currentOption === 1">
+      Let us Begin... {{ props.username }}, pick your first principle from the grid of icons, click on one to view a little more information.
+    </h2>
+    <h2 v-else-if="props.username && props.currentOption > 1">
+      OK {{ props.username }}, pick another principle.
+    </h2>
+        <p>
+          Choose a One Planet Living Principle that you want to add to your toolkit. The next page will provide you with information and options for actions to implement in your lifestyle.
+        </p>
+  </div>
+
+  <!-- Selected Principle Content -->
   <div
     v-for="principle in principles"
     v-show="activePanel === principle.id"
     :key="principle.id"
     class="principle"
-    :class="principle"
   >
     <h3>{{ principle.title }}</h3>
     <div v-html="principle.description"></div>
     <div v-if="principle.video">
-      <!-- Render video if set -->
       <div v-html="principle.video" class="principle-video"></div>
     </div>
     <div v-else-if="principle.image.url" class="principle-image">
-      <!-- Render image if video is not set -->
       <img :src="principle.image.url" alt="Image Alt Text" class="principle-image" />
     </div>
     <button class="btn btn--solid" @click="choosePrinciple(principle)">
       Choose this principle
     </button>
   </div>
-  <div>
-</div>
 </template>
+
 
 <style scoped lang="scss">
 @import '@/frontend/scss/principle-icons.scss';

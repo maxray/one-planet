@@ -4,6 +4,7 @@ import { useUserStore } from '@/frontend/stores/userStore.js'
 import DefaultLayout from '@/frontend/layouts/DefaultLayout.vue'
 import LoginForm from '@/frontend/components/LoginForm.vue'
 import RegistrationForm from '@/frontend/components/RegistrationForm.vue'
+const logoopl = require('@/frontend/assets/img/logo-opl.png')
 
 const store = useUserStore()
 const userData = computed(() => store.userData)
@@ -15,29 +16,27 @@ const isAuthenticated = computed(() => store.isAuthenticated)
     <section class="section1 h-flow c-section">
       <div class="section c-hero h-2-col">
         <div>
-          <h1>One Planet Living<sup>®</sup></h1>
+          <h1>Begin your One Planet Living<sup>®</sup> Journey</h1>
 
           <div class="embed-container">
             <iframe
-              src="https://www.youtube.com/embed/laFZFDhUdYY?controls=0"
+              src="https://www.youtube.com/embed/JZ0erjJFiCE?controls=0"
               frameborder="0"
               referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
             ></iframe>
           </div>
-          <h2>Begin your One Planet Living<sup>®</sup> Journey</h2>
-          <p>
-            The video  explains the idea behind the project.
-          </p>
+          <p>Here you can create an action plan based on your personal goals and priorities. Using the One Planet Living® framework this will provide you with the knowledge and resources to make better choices and help guide you on your sustainable living journey.
+              Together we can make Birmingham a greener, happier and healthier place to live.</p>
         </div>
 
         <div class="c-feature-box">
           <div v-if="isAuthenticated">
+             <img :src="logoopl" alt="Logo Eco" class="logo-opl" />
             <p>
-              Welcome, <strong>{{ userData.username }}</strong
-              >!
-            </p>
-            <p>Start your Action Plan or access your saved plan</p>
+              Welcome, <strong>{{ userData.username }}</strong> to our sustainability toolkit.</p>
+            
+            <p><strong>Start your Action Plan today or access your saved plan.</strong> </p>
             <router-link class="c-btn c-btn--primary" to="/actionplan">Action Plan</router-link>
           </div>
           <div v-else>
@@ -57,6 +56,14 @@ const isAuthenticated = computed(() => store.isAuthenticated)
 </template>
 
 <style scoped>
+
+
+
+.logo-opl {
+    max-width: 350px;
+    margin-bottom: 1rem;
+}
+
 .login-row {
   display: flex;
   gap: 1rem;

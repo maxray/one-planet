@@ -24,9 +24,9 @@ export const useUserStore = defineStore('main', {
       try {
         const response = await axios.post('/wp-json/vueapp/v1/login', credentials, {
           withCredentials: true,
-          headers: {
-            'X-WP-Nonce': window.oplbaseNonce, // Use the same nonce as registration
-          },
+          // headers: {
+          //   'X-WP-Nonce': window.oplbaseNonce, // Use the same nonce as registration
+          // },
         })
         console.log('Login response:', response.data)
 

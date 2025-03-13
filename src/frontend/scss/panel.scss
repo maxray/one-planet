@@ -3,13 +3,14 @@
   margin: 0;
   list-style: none;
 
+
   .c-card {
     max-width: 100%;
   }
 
-  &.selected {
-    .panel {
-      background-color: var(--brand-blue);
+  &.selected  {
+    .panel-list__item {
+      background-color: var(--brand-orange);
 
       h3,
       p {
@@ -20,12 +21,31 @@
 }
 .panel-list__item {
   list-style: none;
+  cursor:pointer;
+}
+
+.panel-list__item:not(.selected):hover {
+  background-color: var(--brand-orange);
+
+  h3,
+  p,
+  a,
+  a:visited {
+    color: var(--white) !important;
+  }
 }
 
 .panel-list__item.selected {
-  background-color: #e0f7fa;
+  background-color: #f9ceab;
   /* Light blue highlight */
-  border: 2px solid #00796b;
+  // border: 2px solid #00796b;
+
+  h3,
+    p,
+    a,
+    a:visited {
+      color: var(--brand-orange) !important;
+    }
 
 .c-btn--utility svg {
     fill: black;

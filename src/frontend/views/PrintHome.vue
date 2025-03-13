@@ -107,6 +107,7 @@ function fetchDataFromStore(storedData) {
 <template>
   <DefaultLayout>
     <div class="print-plan">
+      <h2 class="hide-print">You can print out this plan or - if you would prefer a PDF click print and choose 'Save as PDF' instead of choosing your printer!</h2>
       <section class="print-options">
         <button class="btn btn--solid" @click="printPage">Print</button>
       </section>
@@ -228,8 +229,10 @@ h3 {
 }
 
 .print__header {
+   @media  (min-width: 768px) {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 3fr;
+   }
   gap: 16px;
   align-items: center;
 }
@@ -272,14 +275,20 @@ h3 {
 }
 
 .principles {
+ @media  (min-width: 768px) {
   display: grid;
   grid-auto-rows: 1fr;
   grid-template-columns: 1fr 1fr 1fr;
+ }
+
   gap: var(--padding);
 }
 
 .principle-column{
   border-radius: var(--border-radius-xs);
+ @media screen and (max-width: 768px) {
+    margin-bottom: 1rem;
+ }
 }
 
 .principle {
