@@ -3,7 +3,7 @@
  * Plugin Name:       One Planet Living
  * Plugin URI:        https://github.com/maxray/one-planet
  * Description:       An interactive tool to help you create your own One Planet Living Action Plan.
- * Version:           1.7.5
+ * Version:           1.7.7
  * Author:            Sush Kelly
  * License:           GPL2
  * Domain Path:       /languages

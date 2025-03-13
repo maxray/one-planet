@@ -273,7 +273,7 @@ h3 {
   // overflow: hidden;
   h3 {
     color: var(--black);
-    height: 42px;
+    line-height: 1
   }
 }
 
