@@ -142,8 +142,18 @@ const saveSelection = async (tools) => {
 }
 
 const goBack = () => {
-  window.history.back()
+  // Remove the current action from the store
+  selectionStore.removeSelectedAction(actionId)
+
+  // Optionally, navigate to a different route or the previous route
+  // window.history.back() can still be useful if you want to go back in the browser history
+  router.push({
+    name: 'actions', // Or any other route you want to go back to
+    params: { principleId: principleId },
+    query: { option: currentOption },
+  })
 }
+
 
 </script>
 

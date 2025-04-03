@@ -33,13 +33,27 @@ const isPrincipleSelected = computed(() => {
 
 const activePanel = ref(-1)
 
-// Define the method
-const showPanel = (index) => {
-  if (activePanel.value !== index) {
+import { nextTick } from 'vue'
+
+const showPanel = (id) => {
+  if (activePanel.value !== id) {
     // If the clicked panel is not already active, show it
-    activePanel.value = index
+    activePanel.value = id
+    
+    // Wait for the DOM to update
+    nextTick(() => {
+      // Scroll to the panel
+      const panelElement = document.getElementById(id)
+      if (panelElement) {
+        panelElement.scrollIntoView({
+          behavior: 'smooth',  // Smooth scroll
+          block: 'start',      // Align to the top of the container
+        })
+      }
+    })
   }
 }
+
 
 const choosePrinciple = (principle) => {
   selectionStore.setPrinciple(principle)
@@ -80,15 +94,18 @@ const props = defineProps({
   </div>
 
   <!-- Default Content Pane -->
-  <div v-if="activePanel === -1" class="principle default-pane">
+  <div v-if="activePanel === -1" class="principle default-pane" >
      <h2 v-if="props.username && props.currentOption === 1">
-      Let us Begin... {{ props.username }}, pick your first principle from the grid of icons, click on one to view a little more information.
+      Let us Begin... {{ props.username }}, the aim is to choose three One Planet Living Principles to add to your action plan. Pick your first principle from the grid of icons. 
     </h2>
     <h2 v-else-if="props.username && props.currentOption > 1">
       OK {{ props.username }}, pick another principle.
     </h2>
-        <p>
-          Choose a One Planet Living Principle that you want to add to your toolkit. The next page will provide you with information and options for actions to implement in your lifestyle.
+        <p v-if="props.username && props.currentOption === 1">
+          Click on each one to view a little more information. Choose a principle that is important to you and it will be added to your action plan. 
+        </p>
+        <p v-else-if="props.username && props.currentOption > 1">
+        Choose a One Planet Living Principle that you want to add to your action plan. Creating a sustainability action plan is a proactive step towards building a greener, happier, and healthier community. 
         </p>
   </div>
 
@@ -98,6 +115,7 @@ const props = defineProps({
     v-show="activePanel === principle.id"
     :key="principle.id"
     class="principle"
+    :id="principle.id"
   >
     <h3>{{ principle.title }}</h3>
     <div v-html="principle.description"></div>
@@ -107,12 +125,12 @@ const props = defineProps({
     <div v-else-if="principle.image.url" class="principle-image">
       <img :src="principle.image.url" alt="Image Alt Text" class="principle-image" />
     </div>
+    <p>The next page will provide you with more information, options for actions to implement in your lifestyle and resources to help you on your sustainability journey. </p>
     <button class="btn btn--solid" @click="choosePrinciple(principle)">
       Choose this principle
     </button>
   </div>
 </template>
-
 
 <style scoped lang="scss">
 @import '@/frontend/scss/principle-icons.scss';

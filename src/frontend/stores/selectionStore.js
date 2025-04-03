@@ -168,6 +168,18 @@ export const useSelectionStore = defineStore({
       }
     },
 
+    removePrinciple(optionId) {
+      // Confirm deletion of the principle
+      if (this.options[optionId]) {
+        this.options[optionId].currentPrinciple = null;
+        this.options[optionId].actions = [];
+        saveStateToLocal(this.$state);
+      } else {
+        console.warn('Option not found:', optionId);
+      }
+    },
+  // }
+
     clearSelectedActions() {
       this.selectedActions = []
     },

@@ -36,7 +36,7 @@ export default {
 .container {
   @media only screen and (max-width: 768px) {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 1rem;
   }
   @media only screen and (min-width: 768px) {

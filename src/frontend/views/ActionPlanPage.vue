@@ -164,9 +164,8 @@ const handleCancel = () => {
             </div>
           </div>
           <p>
-            Here are your current chosen principles, click to edit or print out for your records.
-
-          </p>
+           Here are your chosen principles and actions to help you on your sustainability journey. Making small changes in our daily lives can have a big impact, use your action plan below to make better choices for a greener, happier and healthier future.</p>
+          <p>Click to edit or print out for your records.</p>
 <h5 v-if="fetchedData.filter(data => data.principleName).length >= 3" class="max-principles-message">
   You have selected the maximum of 3 principles - click on Print Action Plan if you want to have a version to put on your fridge. You can come back here any time to update or change your actions and tools!
 </h5>

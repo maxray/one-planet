@@ -683,7 +683,7 @@ button.panel.selected p[data-v-6c044f3a] {
 @media only screen and (max-width: 768px) {
 .container[data-v-f382a74a] {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 1rem;
 }
 }
@@ -943,7 +943,7 @@ h3[data-v-4fd37ef2] {
 }
 .action__description h3[data-v-4fd37ef2] {
   color: var(--black);
-  height: 42px;
+  line-height: 1;
 }
 .principles[data-v-4fd37ef2] {
   gap: var(--padding);
