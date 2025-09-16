@@ -180,7 +180,7 @@ const gotoActionPlan = async () => {
         </confirmation-modal>
         <div class="section c-hero h-2-col">
           <div class="c-hero--text">
-            <h1>Choose an action</h1>
+            <h1>Select an action</h1>
             <div v-html="principle.strapline"></div>
           </div>
           <div v-if="loaded">

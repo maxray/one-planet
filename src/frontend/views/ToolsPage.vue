@@ -209,7 +209,7 @@ export default {
               Continue with these selections
             </button>
 
-            <h3>Select tools below and then click continue when you are happy.</h3>
+            <h3>Select your tools below and then click continue when you are happy.</h3>
             <hr />
 
             <!-- Display tools relevant to the current action -->

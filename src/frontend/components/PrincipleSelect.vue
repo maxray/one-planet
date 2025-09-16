@@ -96,7 +96,7 @@ const props = defineProps({
   <!-- Default Content Pane -->
   <div v-if="activePanel === -1" class="principle default-pane" >
      <h2 v-if="props.username && props.currentOption === 1">
-      Let us Begin... {{ props.username }}, the aim is to choose three One Planet Living Principles to add to your action plan. Pick your first principle from the grid of icons. 
+      Let us Begin... {{ props.username }}, <b>the aim is to choose three One Planet Living Principles®  to add to your action plan</b>. Pick your first principle from the grid of icons. 
     </h2>
     <h2 v-else-if="props.username && props.currentOption > 1">
       OK {{ props.username }}, pick another principle.
@@ -105,7 +105,7 @@ const props = defineProps({
           Click on each one to view a little more information. Choose a principle that is important to you and it will be added to your action plan. 
         </p>
         <p v-else-if="props.username && props.currentOption > 1">
-        Choose a One Planet Living Principle that you want to add to your action plan. Creating a sustainability action plan is a proactive step towards building a greener, happier, and healthier community. 
+        Choose a One Planet Living®  Principle that you want to add to your action plan. Creating a sustainability action plan is a proactive step towards building a greener, happier, and healthier community. 
         </p>
   </div>
 
@@ -127,7 +127,7 @@ const props = defineProps({
     </div>
     <p>The next page will provide you with more information, options for actions to implement in your lifestyle and resources to help you on your sustainability journey. </p>
     <button class="btn btn--solid" @click="choosePrinciple(principle)">
-      Choose this principle
+     Select this principle
     </button>
   </div>
 </template>
