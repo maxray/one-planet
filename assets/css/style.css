@@ -204,6 +204,15 @@ p {
 .app .formkit-input {
   background-color: var(--white);
 }
+.app .formkit-wrapper,
+.app .formkit-fieldset {
+  max-width: 100%;
+}
+.app .formkit-wrapper .forgot-password,
+.app .formkit-fieldset .forgot-password {
+  width: 100%;
+  text-align: center;
+}
 
 .app {
   /* BUTTONS */

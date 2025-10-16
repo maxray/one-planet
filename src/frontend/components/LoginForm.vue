@@ -63,9 +63,11 @@ const login = async (value) => {
     />
     <FormKit type="submit" label="Login" />
     <p v-if="errorMessage" v-html="errorMessage"></p>
-    <p>
+    <div class="formkit-wrapper">
+      <p class="forgot-password">
       <a :href="lostPasswordUrl">Forgot your password?</a>
     </p>
+  </div>
   </FormKit>
 </template>
 
