@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import { useUserStore } from '@/frontend/stores/userStore.js'
-
+const lostPasswordUrl = window.oplbaseData?.lostPasswordUrl || '/wp-login.php?action=lostpassword&from=oplplugin';
 const userStore = useUserStore()
 const errorMessage = ref('')
 
@@ -63,5 +63,9 @@ const login = async (value) => {
     />
     <FormKit type="submit" label="Login" />
     <p v-if="errorMessage" v-html="errorMessage"></p>
+    <p>
+      <a :href="lostPasswordUrl">Forgot your password?</a>
+    </p>
   </FormKit>
 </template>
+

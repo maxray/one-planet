@@ -25,6 +25,13 @@ class Frontend {
 		wp_enqueue_style( 'oplbase-vendor' );
 		wp_enqueue_script( 'oplbase-frontend' );
 
+		// Build plugin-specific lost-password URL
+    $lost_password_url = add_query_arg(
+        'from',
+        'oplplugin', // marker for plugin
+        wp_lostpassword_url()
+    );
+
 			// Generate a nonce for REST API requests
 		$nonce = wp_create_nonce( 'wp_rest' );
 
