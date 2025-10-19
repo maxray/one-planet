@@ -493,3 +493,13 @@ p {
 .print-plan .action__description p {
   margin-top: 0;
 }
+
+.formkit-wrapper,
+.formkit-fieldset {
+  max-width: 100%;
+}
+.formkit-wrapper .forgot-password,
+.formkit-fieldset .forgot-password {
+  width: 100%;
+  text-align: center;
+}
