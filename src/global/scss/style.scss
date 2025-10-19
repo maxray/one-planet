@@ -75,10 +75,10 @@
 
 .formkit-wrapper,
 .formkit-fieldset {
-  max-width: 100%;
+  max-width: 100% !important;
 
   .forgot-password {
-    width: 100%;
-    text-align: center;
+    width: 100% !important;
+    text-align: center !important;
   }
 }

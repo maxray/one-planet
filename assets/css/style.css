@@ -206,12 +206,12 @@ p {
 }
 .app .formkit-wrapper,
 .app .formkit-fieldset {
-  max-width: 100%;
+  max-width: 100% !important;
 }
 .app .formkit-wrapper .forgot-password,
 .app .formkit-fieldset .forgot-password {
-  width: 100%;
-  text-align: center;
+  width: 100% !important;
+  text-align: center !important;
 }
 
 .app {
@@ -496,10 +496,10 @@ p {
 
 .formkit-wrapper,
 .formkit-fieldset {
-  max-width: 100%;
+  max-width: 100% !important;
 }
 .formkit-wrapper .forgot-password,
 .formkit-fieldset .forgot-password {
-  width: 100%;
-  text-align: center;
+  width: 100% !important;
+  text-align: center !important;
 }
